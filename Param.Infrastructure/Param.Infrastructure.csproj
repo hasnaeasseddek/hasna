@@ -18,6 +18,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Param.Application\Param.Application.csproj" />
 	  <ProjectReference Include="..\Param.Domain\Param.Domain.csproj" />
 	</ItemGroup>
 

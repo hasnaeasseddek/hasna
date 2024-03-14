@@ -1,4 +1,5 @@
-﻿using Param.Domain.Entities;
+﻿using Param.Application.IRepositories;
+using Param.Domain.Entities;
 using Param.Infrastructure.Data;
 
 namespace Param.Infrastructure.Repositories;

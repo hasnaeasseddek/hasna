@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+
+using Param.Application.IRepositories;
 using System.Linq.Expressions;
 
 namespace Param.Infrastructure.Data;

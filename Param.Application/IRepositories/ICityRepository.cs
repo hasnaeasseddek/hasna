@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Param.Domain.Entities;
 
 namespace Param.Application.IRepositories
 {
-    public interface ICityRepository
+    public interface ICityRepository : IRepository<City>
     {
     }
 }
