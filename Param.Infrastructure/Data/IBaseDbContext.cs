@@ -1,12 +1,13 @@
-﻿
+﻿using Param.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using Param.Domain.Entities;
 
-namespace Param.Infrastructure.Data
+namespace Param.Infrastructure.Data;
+
+public interface IBaseDbContext
 {
-    public interface IBaseDbContext
-    {
-        DbSet<City> Cities { get; set; }
+    DbSet<City> Cities { get; set; }
+   
+    DbSet<T> Set<T>() where T : class;
 
-    }
+    Task<int> SaveChangesAsync();
 }

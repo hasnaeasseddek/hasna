@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
 using Param.Application.IRepositories;
+using Param.Infrastructure.Data;
 using System.Linq.Expressions;
 
-namespace Param.Infrastructure.Data;
+namespace Param.Infrastructure.Repositories;
 
 public class Repository<T> : IRepository<T> where T : class
 {
