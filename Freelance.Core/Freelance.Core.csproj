@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Features\Projets\Queries\Results\**" />
+    <EmbeddedResource Remove="Features\Projets\Queries\Results\**" />
+    <None Remove="Features\Projets\Queries\Results\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Freelance.Data\Freelance.Data.csproj" />
+    <ProjectReference Include="..\Freelance.Infrastructur\Freelance.Infrastructur.csproj" />
+    <ProjectReference Include="..\Freelance.Service\Freelance.Service.csproj" />
+  </ItemGroup>
+
+</Project>

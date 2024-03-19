@@ -1,15 +1,16 @@
-using Freelance.Application;
-using AutoMapper;
-using Freelance.Application.Common.Mapping;
-using Freelance.Application.Persistence.IRepositories;
-using Freelance.Infrastructure;
-using Freelance.Infrastructure.Persistence.Repositories;
+
+
+using Freelance.Infrastructur;
+using Freelance.Service;
+using Freelance.Core;
+using Microsoft.EntityFrameworkCore;
+using Freelance.InfrastructurData;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddApplication();
-builder.Services.AddInfrastructure(builder.Configuration);
+//builder.Services.AddApplication();
+//builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddCors();
@@ -18,6 +19,24 @@ builder.Services.AddCors();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+
+
+
+
+builder.Services.AddDbContext<ApplicationDbContext>(option =>
+    option.UseSqlServer(builder.Configuration.GetConnectionString("myCon"))
+);
+
+
+builder.Services.AddInfrastructureDependencies()
+    .AddModuleServiceDependencies()
+    .AddModuleCoreDependencies();
+
+
+
+
 
 
 
