@@ -1,21 +1,44 @@
 {
   "Routes": [
     {
-      
-        "UpstreamPathTemplate": "/gateway/login",
-        "UpstreamHttpMethod": ["Post"],
-        "DownstreamPathTemplate": "/api/Auth/login",
-        "DownstreamScheme": "https",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "localhost",
-            "Port": 7002
-          }
-        ]
-      
 
+      "UpstreamPathTemplate": "/gateway/login",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Auth/login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7002
+        }
+      ]
 
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/register",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Auth/register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7002
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/role",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Auth/role",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7002
+        }
+      ]
     }
+
 
   ]
 

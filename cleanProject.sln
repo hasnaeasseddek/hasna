@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "microservice.Auth", "microservice.Auth\microservice.Auth.csproj", "{5A6BAE9C-8E3E-4BE0-AE52-9B05561015BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{2C08B1BC-0FEA-4F70-8B3E-C1FB1024CFD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gateway", "gateway\gateway.csproj", "{8558408B-37FB-4BB5-9D98-20424F13CD8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A6BAE9C-8E3E-4BE0-AE52-9B05561015BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A6BAE9C-8E3E-4BE0-AE52-9B05561015BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A6BAE9C-8E3E-4BE0-AE52-9B05561015BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A6BAE9C-8E3E-4BE0-AE52-9B05561015BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8558408B-37FB-4BB5-9D98-20424F13CD8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8558408B-37FB-4BB5-9D98-20424F13CD8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8558408B-37FB-4BB5-9D98-20424F13CD8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8558408B-37FB-4BB5-9D98-20424F13CD8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A6BAE9C-8E3E-4BE0-AE52-9B05561015BB} = {2C08B1BC-0FEA-4F70-8B3E-C1FB1024CFD9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1343F73-9027-4B19-978E-0FCC5D7485DD}
+	EndGlobalSection
+EndGlobal
