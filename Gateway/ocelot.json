@@ -2,6 +2,7 @@
   "Routes": [
     {
 
+
       "UpstreamPathTemplate": "/gateway/login",
       "UpstreamHttpMethod": [ "Post" ],
       "DownstreamPathTemplate": "/api/Auth/login",

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace freelance.Auth.Controllers
 {
+
     [Route("api/Auth")]
     [ApiController]
     public class AuthAPIController : ControllerBase
@@ -29,6 +30,7 @@ namespace freelance.Auth.Controllers
             _response.Result = errorMessage;
             return Ok(_response.Result);
         }
+
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto model)
