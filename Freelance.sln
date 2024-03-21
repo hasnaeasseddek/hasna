@@ -21,13 +21,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Freelance", "Freelance", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Param.API", "Param.API\Param.API.csproj", "{338906A5-43BD-415F-A0DB-DD7A523A0B14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Freelance.Core", "Freelance.Core\Freelance.Core.csproj", "{86E207E5-B558-4308-86FE-44D629245EC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Freelance.Core", "Freelance.Core\Freelance.Core.csproj", "{86E207E5-B558-4308-86FE-44D629245EC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Freelance.Service", "Freelance.Service\Freelance.Service.csproj", "{5196E0C7-2558-4319-94A1-6FE6AEB55461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Freelance.Service", "Freelance.Service\Freelance.Service.csproj", "{5196E0C7-2558-4319-94A1-6FE6AEB55461}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Freelance.Infrastructur", "Freelance.Infrastructur\Freelance.Infrastructur.csproj", "{D1BF4D58-9B17-4A35-8CEA-0358E3B4F5D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Freelance.Infrastructur", "Freelance.Infrastructur\Freelance.Infrastructur.csproj", "{D1BF4D58-9B17-4A35-8CEA-0358E3B4F5D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Freelance.Data", "Freelance.Data\Freelance.Data.csproj", "{B8BA23A1-F282-4F26-B43A-FC1F982DC2AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Freelance.Data", "Freelance.Data\Freelance.Data.csproj", "{B8BA23A1-F282-4F26-B43A-FC1F982DC2AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{871144F4-2AAE-45D8-AD32-183CE4EC8A27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "freelance.Auth", "freelance.Auth\freelance.Auth.csproj", "{FD18787F-D777-43F5-9D36-B895C2B07409}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API Gateway", "API Gateway", "{AA76DA41-3488-4D0D-A70E-073B7C3B599F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gateway", "Gateway\Gateway.csproj", "{DB89C731-45C9-42DD-8D89-C67B125816E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +79,14 @@ Global
 		{B8BA23A1-F282-4F26-B43A-FC1F982DC2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8BA23A1-F282-4F26-B43A-FC1F982DC2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8BA23A1-F282-4F26-B43A-FC1F982DC2AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD18787F-D777-43F5-9D36-B895C2B07409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD18787F-D777-43F5-9D36-B895C2B07409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD18787F-D777-43F5-9D36-B895C2B07409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD18787F-D777-43F5-9D36-B895C2B07409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB89C731-45C9-42DD-8D89-C67B125816E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB89C731-45C9-42DD-8D89-C67B125816E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB89C731-45C9-42DD-8D89-C67B125816E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB89C731-45C9-42DD-8D89-C67B125816E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +104,10 @@ Global
 		{5196E0C7-2558-4319-94A1-6FE6AEB55461} = {7ABD6CD9-2A45-4262-9C39-C2B9D2A8402A}
 		{D1BF4D58-9B17-4A35-8CEA-0358E3B4F5D3} = {7ABD6CD9-2A45-4262-9C39-C2B9D2A8402A}
 		{B8BA23A1-F282-4F26-B43A-FC1F982DC2AA} = {7ABD6CD9-2A45-4262-9C39-C2B9D2A8402A}
+		{871144F4-2AAE-45D8-AD32-183CE4EC8A27} = {DB4C4A25-8AA7-49DA-9EBE-03BD956C56D9}
+		{FD18787F-D777-43F5-9D36-B895C2B07409} = {871144F4-2AAE-45D8-AD32-183CE4EC8A27}
+		{AA76DA41-3488-4D0D-A70E-073B7C3B599F} = {536AB331-8F20-4777-88D5-687A862F0226}
+		{DB89C731-45C9-42DD-8D89-C67B125816E7} = {AA76DA41-3488-4D0D-A70E-073B7C3B599F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B448E6B2-2E3F-4B6D-980F-315D540A6F88}
