@@ -92,5 +92,15 @@ namespace Freelace.Service.OffreService.Implementations
             }
             return offre;
         }
+
+        public async Task<List<Offre>> GetLatesttOffresAsync()
+        {
+            var latestOffres = await _offreRepository.GetTableNoTraking()
+                                              .Include(x => x.Entreprise)
+                                              .OrderByDescending(x => x.Date)
+                                              .Take(6)
+                                              .ToListAsync();
+            return latestOffres;
+        }
     }
 }

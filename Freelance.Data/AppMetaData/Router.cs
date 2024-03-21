@@ -17,6 +17,7 @@ namespace Freelance.Data.AppMetaData
         {
             public const string Prefix =Role+"Offre";
             public const string List = Prefix+"/List";
+            public const string LatestOffre = Prefix + "/LatestOffre";
             public const string Paginated = Prefix+ "/Paginated";
             public const string GetByID = Prefix+"/{id}";
             public const string Create = Prefix+"/Create";

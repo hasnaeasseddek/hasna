@@ -10,7 +10,7 @@ namespace Freelance.Core.Features.Entreprises.Queries.Results
     public class GetSingleEntrepriseResponse
     {
         public int Id { get; set; }
-
+        public string IdUserReference { get; set; }
         public string? Name { get; set; }
         public string? RaisonSociale { get; set; }
 

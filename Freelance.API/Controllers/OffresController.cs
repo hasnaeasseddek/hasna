@@ -25,6 +25,12 @@ namespace Freelance.API.Controllers
             var res = await _mediator.Send(new GetOffreListQuery());
             return Ok(res);
         }
+        [HttpGet(Router.OffreRouting.LatestOffre)]
+        public async Task<IActionResult> GetLatestOffre()
+        {
+            var res = await _mediator.Send(new GetLastOffreQuery());
+            return Ok(res);
+        }
 
 
         [HttpGet(Router.OffreRouting.Paginated)]
@@ -34,14 +40,13 @@ namespace Freelance.API.Controllers
             return Ok(res);
         }
 
-        //[HttpGet("/offres/{id}")]
         [HttpGet(Router.OffreRouting.GetByID)]
         public async Task<IActionResult> GetOffreById([FromRoute] int id)
         {
             var res = await _mediator.Send(new GetOffreByIDQuery(id));
             return Ok(res);
         }
-        //[HttpGet("/offres/{id}")]
+
         [HttpPost(Router.OffreRouting.Create)]
         public async Task<IActionResult> CreateOffre([FromBody] AddOffreCommand command)
         {
@@ -49,7 +54,7 @@ namespace Freelance.API.Controllers
             return Ok(res);
         }
 
-        //[HttpGet("/offres/{id}")]
+
         [HttpPut(Router.OffreRouting.Edit)]
         public async Task<IActionResult> EditOffre([FromBody] EditOffreCommand command)
         {

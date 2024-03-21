@@ -9,6 +9,7 @@ namespace Freelance.Core.Features.Entreprises.Commandes.Models
 {
     public class AddEntrepriseCommande : IRequest<string>
     {
+        public string IdUserReference { get; set; }
         public string? Name { get; set; }
         public string? RaisonSociale { get; set; }
 

@@ -45,10 +45,10 @@ namespace Freelance.Core.Features.Experiences.Commandes.Handlers
             var experience = await _experienceService.GetExperiencesByIDAsync(request.IdExp);
             if (experience == null)
             {
-                return "offre is not found";
+                return "experience is not found";
             }
             // map between request and offre
-            var experienceMapper = _mapper.Map<Experience>(request);
+            var experienceMapper = _mapper.Map(request,experience);
             // call service that make edit
             var result = await _experienceService.EditAsync(experienceMapper);
             // return response
@@ -67,7 +67,7 @@ namespace Freelance.Core.Features.Experiences.Commandes.Handlers
             var experience = await _experienceService.GetExperiencesByIDAsync(request.IdExp);
             if (experience == null)
             {
-                return "offre is not found";
+                return "experience is not found";
             }
             // call service that make edit
             var result = await _experienceService.DeleteAsync(experience);
@@ -75,7 +75,7 @@ namespace Freelance.Core.Features.Experiences.Commandes.Handlers
             // return response
             if (result == "Success")
             {
-                return "Updateed Successfully";
+                return "Deleted Successfully";
             }
             else
             {

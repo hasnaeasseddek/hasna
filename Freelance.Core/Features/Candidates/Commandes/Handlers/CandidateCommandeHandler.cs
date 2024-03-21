@@ -45,10 +45,10 @@ namespace Freelance.Core.Features.Candidates.Commandes.Handlers
             var candidat = await _candidatService.GetCandidatsByIDAsync(request.Idc);
             if (candidat == null)
             {
-                return "offre is not found";
+                return "Candidat is not found";
             }
             // map between request and offre
-            var candidatMapper = _mapper.Map<Candidat>(request);
+            var candidatMapper = _mapper.Map(request,candidat);
             // call service that make edit
             var result = await _candidatService.EditAsync(candidatMapper);
             // return response
@@ -67,7 +67,7 @@ namespace Freelance.Core.Features.Candidates.Commandes.Handlers
             var candidat = await _candidatService.GetCandidatsByIDAsync(request.Idc);
             if (candidat == null)
             {
-                return "offre is not found";
+                return "candidat is not found";
             }
             // call service that make edit
             var result = await _candidatService.DeleteAsync(candidat);
@@ -75,7 +75,7 @@ namespace Freelance.Core.Features.Candidates.Commandes.Handlers
             // return response
             if (result == "Success")
             {
-                return "Updateed Successfully";
+                return "Deleted Successfully";
             }
             else
             {

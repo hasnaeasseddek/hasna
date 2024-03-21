@@ -46,10 +46,10 @@ namespace Freelance.Core.Features.Entreprises.Commandes.Handlers
             var entrep = await _entrepriseService.GetEntreprisesByIDAsync(request.Ide);
             if (entrep == null)
             {
-                return "offre is not found";
+                return "entreprise is not found";
             }
             // map between request and offre
-            var entrepMapper=_mapper.Map<Entreprise>(request);
+            var entrepMapper=_mapper.Map(request,entrep);
             // call service that make edit
             var result = await _entrepriseService.EditAsync(entrepMapper);
             // return response
@@ -69,7 +69,7 @@ namespace Freelance.Core.Features.Entreprises.Commandes.Handlers
             var entrep = await _entrepriseService.GetEntreprisesByIDAsync(request.Ide);
             if (entrep == null)
             {
-                return "offre is not found";
+                return "entreprise is not found";
             }
             // call service that make edit
             var result = await _entrepriseService.DeleteAsync(entrep);
@@ -77,7 +77,7 @@ namespace Freelance.Core.Features.Entreprises.Commandes.Handlers
             // return response
             if (result == "Success")
             {
-                return "Updateed Successfully";
+                return "Deleted Successfully";
             }
             else
             {

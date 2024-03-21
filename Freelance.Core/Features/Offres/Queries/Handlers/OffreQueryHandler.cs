@@ -21,7 +21,8 @@ namespace Freelance.Core.Features.Offres.Queries.Handlers
 {
     public class OffreQueryHandler : IRequestHandler<GetOffreListQuery, List<GetOffreListResponse>>,
                                         IRequestHandler<GetOffreByIDQuery, GetSingleOffreResponse>,
-                                        IRequestHandler<GetOffrePaginatedListQuery, PaginatedResult<GetOffrePaginatedListResponse>>
+                                        IRequestHandler<GetOffrePaginatedListQuery, PaginatedResult<GetOffrePaginatedListResponse>>,
+                                        IRequestHandler<GetLastOffreQuery, List<GetOffreListResponse>>
     {
         private readonly IOffreService _offreService;
         private readonly IMapper _mapper;
@@ -61,6 +62,13 @@ namespace Freelance.Core.Features.Offres.Queries.Handlers
             var PaginatedList = await FilterQuery.Select(expression).ToPaginatedListAsync(request.PageNumber, request.PageSize);
 
             return PaginatedList;
+        }
+
+        public async Task<List<GetOffreListResponse>> Handle(GetLastOffreQuery request, CancellationToken cancellationToken)
+        {
+            var latestOffre = await _offreService.GetLatesttOffresAsync();
+            var latestOffreResponse = _mapper.Map<List<GetOffreListResponse>>(latestOffre);
+            return latestOffreResponse;
         }
     }
 }

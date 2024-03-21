@@ -14,7 +14,7 @@ namespace Freelance.Data.Entities
             Offres = new HashSet<Offre>();
         }
         public int Id { get; set; }
-
+        public string IdUserReference { get; set; }
         public string? Name { get; set; }
         public string? RaisonSociale { get; set; }
 

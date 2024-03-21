@@ -55,7 +55,7 @@ namespace Freelance.Core.Features.Offres.Commandes.Handlers
                 return "offre is not found";
             }
             // map between request and offre
-            var offreMapper = _mapper.Map<Offre>(request);
+            var offreMapper = _mapper.Map(request,offre);
             // call service that make edit
             var result = await _offreService.EditAsync(offreMapper);
 
@@ -85,7 +85,7 @@ namespace Freelance.Core.Features.Offres.Commandes.Handlers
             // return response
             if (result == "Success")
             {
-                return "Updateed Successfully";
+                return "Deleted Successfully";
             }
             else
             {

@@ -45,10 +45,10 @@ namespace Freelance.Core.Features.Formations.Commandes.Handlers
             var formation = await _formationService.GetFormationsByIDAsync(request.Idf);
             if (formation == null)
             {
-                return "offre is not found";
+                return "formation is not found";
             }
             // map between request and offre
-            var formationMapper = _mapper.Map<Formation>(request);
+            var formationMapper = _mapper.Map(request,formation);
             // call service that make edit
             var result = await _formationService.EditAsync(formationMapper);
             // return response
@@ -67,7 +67,7 @@ namespace Freelance.Core.Features.Formations.Commandes.Handlers
             var formation = await _formationService.GetFormationsByIDAsync(request.Idf);
             if (formation == null)
             {
-                return "offre is not found";
+                return "formation is not found";
             }
             // call service that make edit
             var result = await _formationService.DeleteAsync(formation);
@@ -75,7 +75,7 @@ namespace Freelance.Core.Features.Formations.Commandes.Handlers
             // return response
             if (result == "Success")
             {
-                return "Updateed Successfully";
+                return "Deleted Successfully";
             }
             else
             {

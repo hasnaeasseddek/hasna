@@ -45,10 +45,10 @@ namespace Freelance.Core.Features.Projets.Commandes.Handlers
             var projet = await _projetService.GetProjectsByIDAsync(request.IdProj);
             if (projet == null)
             {
-                return "offre is not found";
+                return "Projet is not found";
             }
             // map between request and offre
-            var projetMapper = _mapper.Map<Projet>(request);
+            var projetMapper = _mapper.Map(request,projet);
             // call service that make edit
             var result = await _projetService.EditAsync(projetMapper);
             // return response
@@ -67,7 +67,7 @@ namespace Freelance.Core.Features.Projets.Commandes.Handlers
             var projet = await _projetService.GetProjectsByIDAsync(request.IdProj);
             if (projet == null)
             {
-                return "offre is not found";
+                return "Projet is not found";
             }
             // call service that make edit
             var result = await _projetService.DeleteAsync(projet);
@@ -75,7 +75,7 @@ namespace Freelance.Core.Features.Projets.Commandes.Handlers
             // return response
             if (result == "Success")
             {
-                return "Updateed Successfully";
+                return "Deleted Successfully";
             }
             else
             {

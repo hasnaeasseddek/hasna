@@ -10,6 +10,7 @@ namespace Freelace.Service.OffreService.Abstracts
     public interface IOffreService
     {
         public Task<List<Offre>> GetOffresListAsync();
+        public Task<List<Offre>> GetLatesttOffresAsync();
         public Task<Offre> GetOffresByIDAsync(int id);
         public Task<string> AddAsync(Offre offre);
         public Task<string> EditAsync(Offre offre);

@@ -10,6 +10,7 @@ namespace Freelance.Core.Features.Candidates.Commandes.Models
 {
     public class AddCandidateCommandes : IRequest<string>
     {
+        public string IdUserReference { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }
